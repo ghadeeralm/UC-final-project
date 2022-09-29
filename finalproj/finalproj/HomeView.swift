@@ -36,76 +36,83 @@ struct HomeView: View {
         
         
         NavigationView {
+            
             ScrollView {
                            
                            
-                                   VStack{
-                                   Text("Categories:")
-                                           .bold()
-                                           .font(.title3)
-                                           .frame(maxWidth: .infinity, alignment: .leading)
-                                       .font(.system(size: 27))
-                                       .padding()
-                                   
-                                       ForEach(cats) {
-                                           cat in
+                VStack {
+                    Text("HUMANITIES")
+                        .font(.title3)
+                        .foregroundColor(.gray)
+                        
+                    VStack{
+                                       Text("Categories:")
+                                               .bold()
+                                               .font(.title3)
+                                               .frame(maxWidth: .infinity, alignment: .leading)
+                                           .font(.system(size: 27))
+                                           .padding()
+                                       
+                                           ForEach(cats) {
+                                               cat in
+                                               
                                            
-                                       
-                                           NavigationLink(destination: views(details: cat.items))
-                                       {
-                                           outsideView(cat: cat
-                                                       
-                                           )
-                                       }
-                                                      
+                                               NavigationLink(destination: views(details: cat.items))
+                                           {
+                                               outsideView(cat: cat
+                                                           
+                                               )
+                                           }
+                                                          
+                                               
+                                           }
+    //                                       ZStack {
+    //                                           Image("toys")
+    //                                               .resizable()
+    //                                               .scaledToFit()
+    //                                               .frame(width: 220, height: 120, alignment: .leading)
+    //                                           .clipShape(Circle())
+    //                                           Text("TOYS")
+    //                                               .foregroundColor(.white)
+    //                                               .font(.title3)
+    //                                               .bold()
+    //                                               .font(.system(size: 40))
+    //                                       }
+    //                                       ZStack {
+    //                                           Image("furniture")
+    //                                               .resizable()
+    //                                               .scaledToFit()
+    //                                               .frame(width: 220, height: 120, alignment: .leading)
+    //                                           .clipShape(Circle())
+    //                                           Text("FURNITURE")
+    //                                               .foregroundColor(.white)
+    //                                               .font(.title3)
+    //                                               .bold()
+    //                                               .font(.system(size: 40))
+    //                                       }
+    //                                       ZStack{
+    //
+    //                                           Image("schoolsupp")
+    //                                               .resizable()
+    //                                               .scaledToFit()
+    //                                               .frame(width: 220, height: 120, alignment: .leading)
+    //                                           .clipShape(Circle())
+    //                                           Text("SCHL. SUPP")
+    //                                               .foregroundColor(.white)
+    //                                               .font(.title3)
+    //                                               .bold()
+    //                                               .font(.system(size: 40))
+    //
+    //                                       }
+                                           
+                                           
                                            
                                        }
-//                                       ZStack {
-//                                           Image("toys")
-//                                               .resizable()
-//                                               .scaledToFit()
-//                                               .frame(width: 220, height: 120, alignment: .leading)
-//                                           .clipShape(Circle())
-//                                           Text("TOYS")
-//                                               .foregroundColor(.white)
-//                                               .font(.title3)
-//                                               .bold()
-//                                               .font(.system(size: 40))
-//                                       }
-//                                       ZStack {
-//                                           Image("furniture")
-//                                               .resizable()
-//                                               .scaledToFit()
-//                                               .frame(width: 220, height: 120, alignment: .leading)
-//                                           .clipShape(Circle())
-//                                           Text("FURNITURE")
-//                                               .foregroundColor(.white)
-//                                               .font(.title3)
-//                                               .bold()
-//                                               .font(.system(size: 40))
-//                                       }
-//                                       ZStack{
-//
-//                                           Image("schoolsupp")
-//                                               .resizable()
-//                                               .scaledToFit()
-//                                               .frame(width: 220, height: 120, alignment: .leading)
-//                                           .clipShape(Circle())
-//                                           Text("SCHL. SUPP")
-//                                               .foregroundColor(.white)
-//                                               .font(.title3)
-//                                               .bold()
-//                                               .font(.system(size: 40))
-//
-//                                       }
                                        
                                        
-                                       
-                                   }
-                                   
-                                   
-                                   .navigationTitle("Home")
+                                       .navigationTitle("Home")
                                    .accentColor(.gray)
+                }
                                 
                                    
             }
